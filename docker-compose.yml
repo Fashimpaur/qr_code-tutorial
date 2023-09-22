@@ -1,10 +1,13 @@
 services:
   web:
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
-    container_name: qr_code_web
+    image: qr-code-tutorial
+    build: .
+    container_name: qr-code-web
     ports:
       - '5000:5000'
     volumes:
       - .:/code
+
+networks:
+  default:
+    name: qr-code-tutorial
