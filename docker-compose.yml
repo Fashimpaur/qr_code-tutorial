@@ -8,6 +8,3 @@ services:
     volumes:
       - .:/code
 
-networks:
-  default:
-    name: qr-code-tutorial
